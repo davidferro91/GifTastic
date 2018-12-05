@@ -1,0 +1,33 @@
+#background {
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+.header {
+    background:whitesmoke;
+    border:ridge;
+    text-shadow: 3px 3px 15px #111111;
+    box-shadow: 5px 5px 10px #111111;
+    font-family: 'Salsa', cursive;
+}
+
+#gifForm {
+    color: whitesmoke;
+    background: #111111;
+    border:ridge;
+    box-shadow: 5px 5px 10px #111111;
+    width:350px;
+}
+
+#gifInput {
+    width:200px;
+}
+
+#imageCaption {
+    background: whitesmoke;
+    color: #111111;
+    text-shadow: 3px 3px 15px #111111;
+    box-shadow: 5px 5px 10px #111111;
+}

@@ -7,10 +7,44 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Salsa" rel="stylesheet">
     </head>
     <body>
-        <main>
-
+        <main class="p-5" id="background">
+            <header class="container">
+                <div class="row">
+                    <div class="col text-center rounded header">
+                        <h1>GifTastic!</h1>
+                        <div>Gif Generator - Click on the buttons to generate the gifs. Click on the gifs to animate!</div>
+                        <div>Fueled by giphy.com.</div>
+                    </div>
+                </div>
+            </header>
+            <section class="container">
+                <div class="row m-3">
+                    <div class="col-7"></div>
+                    <div class="col-4">
+                        <form class="form-inline p-2" id="gifForm" width="400px">
+                            <div class="form-group">
+                                <input type="text" id="gifInput" placeholder="Add more GIF types!">
+                                <input class="rounded ml-2" id="addGif" type="submit" value="Add more GIFs!">
+                            </div>    
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rounded p-2" id="gifButtonHolder"></div>                    
+                </div>
+                <div class="row">
+                    <div class="rounded p-2" id="add-more-button-holder">
+                        <button class="m-2 rounded" id="add-more-btn"></button>
+                    </div>
+                </div>
+            </section>
+            <div class="container-fluid">
+                <div class="row p-2" id="imageHolder">
+                </div>
+            </div>
         </main>
         <script type="text/javascript" src="assets/javascript/app.js"></script>
     </body>
