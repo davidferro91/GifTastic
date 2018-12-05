@@ -7,7 +7,7 @@ function generateBtns () {
     for(var i = 0; i < gifOptions.length; i++) {
         var buttonObj = $("<button>");
         buttonObj.append(titleCase(gifOptions[i]));
-        buttonObj.addClass("m-2 rounded");
+        buttonObj.addClass("m-2 rounded btn btn-light");
         buttonObj.attr("id", "gifButton");
         buttonObj.attr("data-name", gifOptions[i]);
         $("#gifButtonHolder").append(buttonObj);
@@ -50,12 +50,14 @@ function imageGenerator (response) {
   $("#addGif").on("click", function(event) {
     event.preventDefault();
     var newGif = $("#gifInput").val().trim();
-    var newGifT = titleCase(newGif);
-    if (gifOptions.indexOf(newGifT) == -1) {
-        gifOptions.push(newGifT);
-        console.log(gifOptions);
-        generateBtns();
-        $("#gifInput").val("");
+    if (newGif.length > 1) {
+        var newGifT = titleCase(newGif);
+        if (gifOptions.indexOf(newGifT) == -1) {
+            gifOptions.push(newGifT);
+            console.log(gifOptions);
+            generateBtns();
+            $("#gifInput").val("");
+        }
     }
   });
 
