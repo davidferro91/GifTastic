@@ -89,7 +89,6 @@ function imageGenerator (response) {
         console.log(response);
         imageGenerator(response);
         $("#background").css({"background-size": "cover", "background-repeat":"no-repeat", "height": "100%"});
-        $("#add-more-btn").show();
     });
   });
 
