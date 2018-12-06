@@ -1,4 +1,4 @@
-var gifOptions = ["borat", "bugs bunny", "randy newman"];
+var gifOptions = ["star trek", "monty python", "mickey mouse", "randy newman"];
 var offsetValue = 0;
 var gifSelector = "";
 
