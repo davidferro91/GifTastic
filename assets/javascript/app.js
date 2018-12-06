@@ -64,7 +64,7 @@ function imageGenerator (response) {
   $("#gifButtonHolder").on("click", "#gifButton", function() {
     offsetValue = 0;
     gifSelector = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifSelector + "&api_key=N1QdJyleGrp27NbEcROUIgiTyBHlE3Gd&limit=10&rating=r&offset="+ offsetValue;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifSelector + "&api_key=N1QdJyleGrp27NbEcROUIgiTyBHlE3Gd&limit=10&rating=r&offset="+ offsetValue;
 
     $.ajax({
         url: queryURL,
@@ -75,12 +75,13 @@ function imageGenerator (response) {
         $("#background").css({"background-size": "cover", "background-repeat":"no-repeat", "height": "100%"});
         $("#add-more-btn").show();
         $("#add-more-btn").text("Add more " + titleCase(gifSelector) + " GIFs!");
+        $("#clear-btn").show();
     });
   });
 
   $("#add-more-btn").on("click", function () {
     offsetValue += 10;
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifSelector + "&api_key=N1QdJyleGrp27NbEcROUIgiTyBHlE3Gd&limit=10&rating=r&offset="+ offsetValue;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifSelector + "&api_key=N1QdJyleGrp27NbEcROUIgiTyBHlE3Gd&limit=10&rating=r&offset="+ offsetValue;
 
     $.ajax({
         url: queryURL,
@@ -103,5 +104,12 @@ function imageGenerator (response) {
         }
   });
 
+  $("#clear-btn").on("click", function() {
+    $("#imageHolder").empty();
+    $("#clear-btn").hide();
+    $("#background").css({"background-size": "cover", "background-repeat":"no-repeat", "height": "150vh"});
+  });
+
 $("#add-more-btn").hide();
+$("#clear-btn").hide();
 generateBtns();
