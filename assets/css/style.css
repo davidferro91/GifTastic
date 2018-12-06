@@ -27,3 +27,7 @@
     text-shadow: 3px 3px 15px #111111;
     box-shadow: 5px 5px 10px #111111;
 }
+
+#gifButton {
+    cursor: pointer;
+}
